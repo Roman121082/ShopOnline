@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <title>m3l7</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header-container">
+      <a class="header__logo" href="#">
+        <img class="header__img" src="./images/logo.svg" alt="">
+      </a>
+
+      <button type="button" class="menu">
+        <img class="menu__img" src="./images/icon/menu-img.svg" alt="">
+        Меню</button>
+
+      <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="form">
+        <input class="input" type="text" name="input" id="input" placeholder="Я ищу...">
+        <button type="submit" class="search-button">
+          <img class="button__img" src="./images/icon/search.svg" alt="">
+        </button>
+      </form>
+
+      <ul class="user">
+
+        <li class="user-item user-item__person">
+          <a href="#" class="user-link">
+            <img class="user-img" src="/images/icon/person.svg" alt="">
+            <p class="user__text">
+              Профиль
+            </p>
+          </a>
+        </li>
+        <li class="user-item user-item__basket">
+          <a href="#" class="user-link">
+            <img class="user-img" src="/images/icon/basket.svg" alt="">
+            <p class="user__text">
+              Корзина
+            </p>
+
+          </a>
+        </li>
+        <li class="user-item user-item__favorite">
+          <a href="#" class="user-link">
+            <img class="user-img" src="/images/icon/favorite.svg" alt="">
+            <p class="user__text">
+              Избранное
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- <main>
+    <section class="section preview">
+      <div class="container">
+        <div class="preview__container">
+          <h2 class="preview__title">
+            -50% на все ноутбуки
+          </h2>
+          <div class="timer">
+            <p class="timer__title">
+              До конца акции:
+            </p>
+            <ul class="timer__list">
+              <li class="timer__item">
+                <p class="timer__number">3
+                  <span class="timer__text">
+                    дня
+                  </span>
+                </p>
+              </li>
+              <li class="timer__item">
+                <p class="timer__number">8
+                  <span class="timer__text">
+                    часов
+                  </span>
+                </p>
+              </li>
+              <li class="timer__item">
+                <p class="timer__number">43
+                  <span class="timer__text">
+                    минуты
+                  </span>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section goods" aria-label="goods">
+      <div class="container goods__container">
+        <ul class="goods__list">
+          <li class="goods__item"></li>
+          <li class="goods__item"></li>
+          <li class="goods__item"></li>
+          <li class="goods__item"></li>
+          <li class="goods__item"></li>
+          <li class="goods__item"></li>
+          <li class="goods__item"></li>
+          <li class="goods__item"></li>
+          <li class="goods__item"></li>
+          <li class="goods__item"></li>
+        </ul>
+      </div>
+    </section>
+  </main> -->
+  <script>
+    document.addEventListener('click', event => { if (event.target.matches('button')) { event.target.focus() } })
+  </script>
+</body>
+
+</html>

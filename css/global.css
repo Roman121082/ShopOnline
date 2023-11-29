@@ -1,0 +1,42 @@
+.container {
+  max-width: 1920px;
+  padding: 0 75px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 30px 0;
+}
+
+
+.footer-container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Lato;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+
+@media(max-width: 1024px) {
+  .container {
+    padding: 0 42px;
+  }
+}
+
+@media(max-width: 768px) {
+  .section {
+    padding: 20px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
