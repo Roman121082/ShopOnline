@@ -9,11 +9,6 @@
 }
 
 
-.footer-container {
-  max-width: 1260px;
-  margin: 0 auto;
-}
-
 
 body {
   min-width: 320px;
@@ -25,7 +20,7 @@ body {
 }
 
 
-@media(max-width: 1024px) {
+@media(max-width: 1650px) {
   .container {
     padding: 0 42px;
   }
