@@ -93,6 +93,10 @@
 }
 
 @media(max-width: 1650px) {
+  .header {
+    padding: 30px 0 30px;
+  }
+
   .header-container {
     grid-template-columns: minmax(max-content, 239px) 1fr minmax(max-content, 294px);
     row-gap: 34px;
@@ -113,6 +117,10 @@
 }
 
 @media(max-width: 1300px) {
+  .header {
+    padding: 25px 0 20px;
+  }
+
   .user {
     gap: 40px;
     grid-column: 3;
@@ -166,6 +174,10 @@
 }
 
 @media(max-width: 600px) {
+  .header {
+    padding: 25px 0 10px;
+  }
+
   .header-container {
     row-gap: 20px;
     grid-template-columns: 1fr 1fr;
