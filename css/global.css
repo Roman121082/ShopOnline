@@ -1,6 +1,6 @@
 .container {
   max-width: 1920px;
-  padding: 0 75px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -20,18 +20,9 @@ body {
 }
 
 
-@media(max-width: 1650px) {
-  .container {
-    padding: 0 42px;
-  }
-}
-
 @media(max-width: 768px) {
   .section {
     padding: 20px 0;
   }
 
-  .container {
-    padding: 0 20px;
-  }
 }

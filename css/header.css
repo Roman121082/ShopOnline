@@ -50,11 +50,31 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top center;
-
 }
 
 .user-link {
   color: black;
+}
+
+.user-item__basket {
+  position: relative;
+}
+
+.user__quantity {
+  position: absolute;
+  display: flex;
+  top: -3px;
+  right: 8px;
+  color: rgba(54, 112, 199, 1);
+  font-size: 14px;
+  line-height: 18px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 2px 2px 2px 3px;
+  text-align: center;
+  align-items: center;
 }
 
 .form {
@@ -243,5 +263,17 @@
   .button__img {
     width: 20px;
     height: 20px;
+  }
+
+  .user__quantity {
+    top: -3px;
+    right: -6px;
+    font-size: 14px;
+    line-height: 18px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    padding: 2px 2px 2px 3px;
+
   }
 }
