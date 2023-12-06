@@ -20,18 +20,20 @@
   font-weight: 700;
 }
 
-.goods__item .goods__discount {
+.goods__discount {
   position: absolute;
   background-color: rgba(255, 189, 19, 1);
+  background-position: center;
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  display: flex;
+  padding: 24px 9px;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   font-weight: 700;
   font-size: 30px;
-  line-height: 0;
+  line-height: 30px;
 }
 
 .goods__item:nth-child(1) {
