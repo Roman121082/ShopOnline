@@ -328,7 +328,7 @@
 
   .catalog__item_card_chemistry {
     grid-column: 4;
-    grid-row: 4;
+    grid-row: 4 / span 2;
   }
 
   .catalog__item_card_decorations {
