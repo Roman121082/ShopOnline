@@ -21,9 +21,9 @@ body {
 }
 
 
+
 @media(max-width: 768px) {
   .section {
     padding: 20px 0;
   }
-
 }

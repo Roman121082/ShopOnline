@@ -1,0 +1,414 @@
+@media(max-width: 1920px) {
+  .catalog__list {
+    gap: calc(20px + (60 - 20) * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  .catalog__discount {
+    width: calc(50px + (88 - 50) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(50px + (88 - 50) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (1920 - 320)));
+    padding-top: calc(14px + (24 - 14) * ((100vw - 320px) / (1920 - 320)));
+    padding-bottom: calc(14px + (24 - 14) * ((100vw - 320px) / (1920 - 320)));
+    padding-left: calc(6px + (9 - 6) * ((100vw - 320px) / (1920 - 320)));
+    padding-right: calc(6px + (9 - 6) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(8px + (14 - 8) * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  .catalog__discount_position_top {
+    left: calc(5px + (20 - 5) * ((100vw - 320px) / (1920 - 320)));
+    top: calc(5px + (20 - 5) * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  .catalog__discount_position_bottom {
+    right: calc(5px + (20 - 5) * ((100vw - 320px) / (1920 - 320)));
+    bottom: calc(5px + (20 - 5) * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  .catalog__item_card_book .catalog__title {
+    font-size: calc(12px + (30 - 12) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(13px + (39 - 13) * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  .catalog__item_card_book .catalog__span {
+    font-size: calc(12px + (30 - 12) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(13px + (39 - 13) * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  .catalog__item_card_time .catalog__title {
+    font-size: calc(12px + (28 - 12) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(18px + (39 - 18) * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  .catalog__item_card_sneakers .catalog__title {
+    font-size: calc(16px + (56 - 16) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(18px + (67 - 18) * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  .catalog__item_card_sneakers .catalog__span {
+    font-size: calc(12px + (40 - 12) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(13px + (48 - 13) * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  .catalog__item_card_present .catalog__title {
+    font-size: calc(12px + (40 - 12) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(14px + (52 - 14) * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  .catalog__item_card_monitor .catalog__title {
+    font-size: calc(12px + (40 - 12) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(14px + (52 - 14) * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  .catalog__item_card_year .catalog__title {
+    padding-top: calc(7px + (32 - 7) * ((100vw - 320px) / (1920 - 320)));
+    padding-bottom: calc(9px + (32 - 9) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(12px + (40 - 12) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(15px + (48 - 15) * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  .catalog__item_card_year {
+    padding: 50px;
+    padding-left: calc(15px + (50 - 15) * ((100vw - 320px) / (1920 - 320)));
+    padding-bottom: calc(10px + (50 - 10) * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  .catalog__item_card_chemistry .catalog__title {
+    font-size: calc(12px + (30 - 12) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(15px + (39 - 15) * ((100vw - 320px) / (1920 - 320)));
+  }
+
+  .catalog__item {
+    padding: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+    ;
+  }
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(140px, 245px));
+  grid-template-rows: repeat(4, minmax(140px, 245px));
+}
+
+
+
+.catalog__item {
+  white-space: pre-line;
+  display: flex;
+  position: relative;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.catalog__title {
+  font-weight: 700;
+  white-space: pre-line;
+}
+
+.catalog__discount {
+  position: absolute;
+  background-color: rgba(255, 189, 19, 1);
+  background-position: center;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+
+.catalog__item_card_book {
+  background-image: url('../images/01.jpg');
+  align-items: flex-end;
+}
+
+.catalog__item_card_book .catalog__span {
+  font-weight: 400;
+}
+
+.catalog__item_card_time {
+  background-image: url('../images/02.jpeg');
+  justify-content: center;
+  align-items: center;
+}
+
+
+.catalog__item_card_sneakers {
+  display: flex;
+  flex-direction: column;
+  background-image: url('../images/03.jpeg');
+  grid-row: 1/span 2;
+  grid-column: 3/span 2;
+  padding-bottom: 22px;
+  justify-content: flex-end;
+}
+
+.catalog__item_card_sneakers .catalog__title {
+  padding: 26px 23px;
+  background-color: rgba(56, 192, 235, 1);
+  border-radius: 20px;
+  white-space: pre-line;
+}
+
+.catalog__item_card_present {
+  background-image: url('../images/04.jpeg');
+  grid-column: span 2;
+  padding: 30px;
+  align-items: flex-end;
+}
+
+.catalog__item_card_present .catalog__title {
+  font-weight: 700;
+}
+
+.catalog__item_card_boot {
+  background-image: url('../images/05.jpeg');
+  grid-column: span 2;
+}
+
+.catalog__item_card_monitor {
+  background-image: url('../images/06.jpeg');
+  grid-column: span 2;
+  padding: 30px;
+  align-items: flex-end;
+}
+
+.catalog__item_card_year {
+  background-image: url('../images/07.jpeg');
+  grid-column: span 4;
+  grid-row: span 2;
+  align-items: flex-end;
+}
+
+.catalog__item_card_year .catalog__title {
+  display: inline-block;
+  text-transform: uppercase;
+  color: rgba(249, 17, 85, 1);
+  padding-left: 41px;
+  padding-right: 41px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.catalog__item_card_woman {
+  background-image: url('../images/08.jpeg');
+  grid-row: span 2;
+}
+
+.catalog__item_card_chemistry {
+  background-image: url('../images/09.jpeg');
+  align-items: flex-end;
+}
+
+
+.catalog__item_card_decorations {
+  background-image: url('../images/10.jpg');
+}
+
+
+/* ===1250=========================================== */
+
+@media(max-width: 1250px) {
+  .catalog {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+
+  .catalog__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(140px, 1fr));
+    grid-template-rows: repeat(6, minmax(140px, 245px));
+  }
+
+
+  .catalog__item_card_sneakers {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
+  }
+
+  .catalog__item_card_present {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+
+  .catalog__item_card_boot {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+  .catalog__item_card_monitor {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+  }
+
+
+  .catalog__item_card_year {
+    align-items: flex-end;
+  }
+
+  .catalog__item_card_year .catalog__title {
+    border-radius: 16px;
+  }
+
+
+  .catalog__item_card_woman {
+    grid-column: 3;
+    grid-row: 3 / span 2;
+  }
+
+
+  .catalog__item_card_chemistry {
+    grid-column: 4;
+    grid-row: 3;
+  }
+
+
+  .catalog__item_card_decorations {
+    grid-column: 4;
+    grid-row: 4;
+  }
+}
+
+
+/* ===850=========================================== */
+@media(max-width: 850px) {
+  .catalog {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+
+  .catalog__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(130px, 1fr));
+    grid-template-rows: 140px 140px 70px 70px 70px 70px 337px;
+  }
+
+  .catalog__item_card_book {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+
+  .catalog__item_card_time {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+
+  .catalog__item_card_sneakers {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 3;
+  }
+
+  .catalog__item_card_present {
+    grid-row: 3 / span 2;
+  }
+
+  .catalog__item_card_boot {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+  .catalog__item_card_monitor {
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 2;
+  }
+
+  .catalog__item_card_year {
+    grid-column: 1 / span 4;
+    grid-row: 7;
+  }
+
+  .catalog__item_card_year .catalog__title {
+    border-radius: 12px;
+  }
+
+  .catalog__item_card_woman {
+    grid-column: 3;
+    grid-row: 4 / span 3;
+  }
+
+  .catalog__item_card_chemistry {
+    grid-column: 4;
+    grid-row: 4;
+  }
+
+  .catalog__item_card_decorations {
+    grid-column: 4;
+    grid-row: 6;
+  }
+}
+
+/* ===700=========================================== */
+
+@media(max-width: 700px) {
+  .catalog__list {
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+    grid-template-rows:
+      minmax(130px, 1fr) minmax(130px, min-content) minmax(280px, max-content) minmax(118px, max-content) minmax(118px, max-content) minmax(130px, max-content) minmax(130px, max-content) 123px;
+  }
+
+
+  .catalog__item_card_book {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+
+  .catalog__item_card_time {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .catalog__item_card_sneakers {
+    grid-row: 3;
+    grid-column: 1/ span 2;
+  }
+
+  .catalog__item_card_sneakers .catalog__title {
+    padding: 9px 25px;
+    border-radius: 8px;
+  }
+
+
+  .catalog__item_card_present {
+    grid-column: 1/ span 2;
+    grid-row: 4;
+  }
+
+  .catalog__item_card_boot {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+  .catalog__item_card_monitor {
+    grid-column: 1 / span 2;
+    grid-row: 5;
+  }
+
+
+  .catalog__item_card_year {
+    grid-column: 1 / span 2;
+    grid-row: 8;
+    justify-content: center;
+    border-radius: 8px;
+  }
+
+  .catalog__item_card_year .catalog__title {
+    border-radius: 6px;
+  }
+
+  .catalog__item_card_woman {
+    grid-column: 1;
+    grid-row: 6 / span 2;
+  }
+
+  .catalog__item_card_chemistry {
+    grid-column: 2;
+    grid-row: 6;
+  }
+
+
+  .catalog__item_card_decorations {
+    grid-column: 2;
+    grid-row: 7;
+  }
+}
