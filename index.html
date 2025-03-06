@@ -1,75 +1,77 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>ShopOnline</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <title>ShopOnline</title>
-</head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <a class="header__logo" href="#">
+          <img class="header__img" src="./images/logo.svg" alt="" />
+        </a>
 
-<body>
-
-  <header class="header">
-    <div class="container header-container">
-      <a class="header__logo" href="#">
-        <img class="header__img" src="./images/logo.svg" alt="">
-      </a>
-
-      <button type="button" class="menu">
-        <img class="menu__img" src="./images/icon/menu-img.svg" alt="">
-        Меню</button>
-
-      <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="form">
-        <input class="input" type="text" name="input" id="input" placeholder="Я ищу...">
-        <button type="submit" class="search-button">
-          <img class="button__img" src="./images/icon/search.svg" alt="">
+        <button type="button" class="menu">
+          <img class="menu__img" src="./images/icon/menu-img.svg" alt="" />
+          Меню
         </button>
-      </form>
 
-      <ul class="user">
+        <form
+          action="https://jsonplaceholder.typicode.com/posts"
+          method="POST"
+          class="form"
+        >
+          <input
+            class="input"
+            type="text"
+            name="input"
+            id="input"
+            placeholder="Я ищу..."
+          />
+          <button type="submit" class="search-button">
+            <img class="button__img" src="./images/icon/search.svg" alt="" />
+          </button>
+        </form>
 
-        <li class="user-item user-item__person">
-          <a href="#" class="user-link">
-            <img class="user-img" src="./images/icon/person.svg" alt="">
-            <p class="user__text">
-              Профиль
-            </p>
-          </a>
-        </li>
-        <li class="user-item user-item__basket">
-          <a href="#" class="user-link">
-            <img class="user-img" src="./images/icon/basket.svg" alt="">
-            <p class="user__text">
-              Корзина
-            </p>
-            <div class="user__quantity">2</div>
-          </a>
-        </li>
-        <li class="user-item user-item__favorite">
-          <a href="#" class="user-link">
-            <img class="user-img" src="./images/icon/favorite.svg" alt="">
-            <p class="user__text">
-              Избранное
-            </p>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </header>
+        <ul class="user">
+          <li class="user-item user-item__person">
+            <a href="#" class="user-link">
+              <img class="user-img" src="./images/icon/person.svg" alt="" />
+              <p class="user__text">Профиль</p>
+            </a>
+          </li>
+          <li class="user-item user-item__basket">
+            <a href="#" class="user-link">
+              <img class="user-img" src="./images/icon/basket.svg" alt="" />
+              <p class="user__text">Корзина</p>
+              <div class="user__quantity">2</div>
+            </a>
+          </li>
+          <li class="user-item user-item__favorite">
+            <a href="#" class="user-link">
+              <img class="user-img" src="./images/icon/favorite.svg" alt="" />
+              <p class="user__text">Избранное</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
-
-  <main>
-    <section class="section preview">
-      <div class="container">
-        <div class="preview__container">
-          <h2 class="preview__title">-50% на все
-            ноутбуки
-          </h2>
-          <div class="timer">
+    <main>
+      <section class="section preview">
+        <div class="container">
+          <div class="preview__container">
+            <h2 class="preview__title">-50% на все ноутбуки</h2>
+            <!-- <div class="timer">
             <p class="timer__title">
               До конца акции:
             </p>
@@ -96,72 +98,65 @@
                 </p>
               </li>
             </ul>
+          </div> -->
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section catalog" aria-label="catalog">
-      <div class="container catalog__container">
-        <ul class="catalog__list">
-          <li class="catalog__item catalog__item_card_book">
-            <p class="catalog__title">Книга –
-              <span class="catalog__span">лучший подарок</span>
-            </p>
-          </li>
-          <li class="catalog__item catalog__item_card_time">
-            <p class="catalog__title">Время скидок!
-            </p>
-            <p class="catalog__discount catalog__discount_position_bottom">
-              -25%
-            </p>
-          </li>
-          <li class="catalog__item catalog__item_card_sneakers">
-            <p class="catalog__title"><span class="catalog__span">Вторая пара кроссовок</span>
-              в подарок!
-            </p>
-          </li>
-          <li class="catalog__item catalog__item_card_present">
-            <p class="catalog__title">Идеи новогодних
-              подарков
-            </p>
-          </li>
-          <li class="catalog__item catalog__item_card_boot">
-            <p class="catalog__discount catalog__discount_position_top">
-              -40%
-            </p>
-          </li>
-          <li class="catalog__item catalog__item_card_monitor">
-            <p class="catalog__title">Выгодно в декабре!
-            </p>
-            <p class="catalog__discount catalog__discount_position_bottom">
-              -15%
-            </p>
-          </li>
-          <li class="catalog__item catalog__item_card_year">
-            <p class="catalog__title">Новогодние украшения
-            </p>
-          </li>
-          <li class="catalog__item catalog__item_card_woman">
-            <p class="catalog__discount catalog__discount_position_bottom">
-              -55%
-            </p>
-          </li>
-          <li class="catalog__item catalog__item_card_chemistry">
-            <p class="catalog__title">На бытовую химию
-            </p>
-            <p class="catalog__discount catalog__discount_position_top">
-              -25%
-            </p>
-          </li>
-          <li class="catalog__item catalog__item_card_decorations"></li>
-        </ul>
-      </div>
-    </section>
-  </main>
-  <script>
-    document.addEventListener('click', event => { if (event.target.matches('button')) { event.target.focus() } })
-  </script>
-</body>
-
+      <section class="section catalog" aria-label="catalog">
+        <div class="container catalog__container">
+          <ul class="catalog__list">
+            <li class="catalog__item catalog__item_card_book">
+              <p class="catalog__title">
+                Книга –
+                <span class="catalog__span">лучший подарок</span>
+              </p>
+            </li>
+            <li class="catalog__item catalog__item_card_time">
+              <p class="catalog__title">Время скидок!</p>
+              <p class="catalog__discount catalog__discount_position_bottom">
+                -25%
+              </p>
+            </li>
+            <li class="catalog__item catalog__item_card_sneakers">
+              <p class="catalog__title">
+                <span class="catalog__span">Вторая пара кроссовок</span>
+                в подарок!
+              </p>
+            </li>
+            <li class="catalog__item catalog__item_card_present">
+              <p class="catalog__title">Идеи новогодних подарков</p>
+            </li>
+            <li class="catalog__item catalog__item_card_boot">
+              <p class="catalog__discount catalog__discount_position_top">
+                -40%
+              </p>
+            </li>
+            <li class="catalog__item catalog__item_card_monitor">
+              <p class="catalog__title">Выгодно в декабре!</p>
+              <p class="catalog__discount catalog__discount_position_bottom">
+                -15%
+              </p>
+            </li>
+            <li class="catalog__item catalog__item_card_year">
+              <p class="catalog__title">Новогодние украшения</p>
+            </li>
+            <li class="catalog__item catalog__item_card_woman">
+              <p class="catalog__discount catalog__discount_position_bottom">
+                -55%
+              </p>
+            </li>
+            <li class="catalog__item catalog__item_card_chemistry">
+              <p class="catalog__title">На бытовую химию</p>
+              <p class="catalog__discount catalog__discount_position_top">
+                -25%
+              </p>
+            </li>
+            <li class="catalog__item catalog__item_card_decorations"></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
 </html>
