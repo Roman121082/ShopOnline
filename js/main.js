@@ -11,10 +11,25 @@ const timer = (deadLine) => {
     const dateNow = Date.now();
     const timeRemaining = dateStop - dateNow;
 
-    const days = Math.floor((timeRemaining / 1000 / 60 / 60 / 24) % 24);
-    const hours = Math.floor((timeRemaining / 1000 / 60 / 60) % 60);
-    const minutes = Math.floor((timeRemaining / 1000 / 60) % 60);
-    const seconds = Math.floor((timeRemaining / 1000) % 60);
+    const daysText = document.querySelector('[data-timer="days"]');
+    const hoursText = document.querySelector('[data-timer="hours"]');
+    const minutesText = document.querySelector('[data-timer="minutes"]');
+    let timerTextDays = document.querySelector(".timer__text-days");
+    let timerTextHours = document.querySelector(".timer__text-hours");
+    let timerTextMinutes = document.querySelector(".timer__text-minutes");
+
+    const days = Math.floor(timeRemaining / 1000 / 60 / 60 / 24);
+    const hours = Math.floor((timeRemaining / 1000 / 60 / 60) % 60)
+      .toString()
+      .padStart(2, "0");
+    const minutes = Math.floor((timeRemaining / 1000 / 60) % 60)
+      .toString()
+      .padStart(2, "0");
+    // seconds = Math.floor((timeRemaining / 1000) % 60);
+
+    daysText.textContent = days;
+    hoursText.textContent = hours;
+    minutesText.textContent = minutes;
 
     function createLabel(number, titles) {
       const cases = [2, 0, 1, 1, 1, 2];
@@ -27,58 +42,30 @@ const timer = (deadLine) => {
       }`;
     }
 
-    const daysText = createLabel(days, ["день", "дня", "дней"]);
-    const hoursText = createLabel(hours, ["час", "часа", "часов"]);
-    const minutesText = createLabel(minutes, ["минута", "минуты", "минут"]);
+    timerTextDays.textContent = createLabel(days, ["день", "дня", "дней"]);
+    timerTextHours.textContent = createLabel(hours, ["час", "часа", "часов"]);
+    timerTextMinutes.textContent = createLabel(minutes, [
+      "минута",
+      "минуты",
+      "минут",
+    ]);
 
-    const previewContainer = document.querySelector(".preview__container");
-    const timerHTML = `<div class="timer">
-            <p class="timer__title">
-              До конца акции:
-            </p>
-            <ul class="timer__list">
-              <li class="timer__item">
-                <p class="timer__number">${days}
-                  <span class="timer__text">
-                    ${daysText}
-                  </span>
-                </p>
-              </li>
-              <li class="timer__item">
-                <p class="timer__number">${hours}
-                  <span class="timer__text">
-                    ${hoursText}
-                  </span>
-                </p>
-              </li>
-              <li class="timer__item">
-                <p class="timer__number">${minutes}
-                  <span class="timer__text">
-                    ${minutesText}
-                  </span>
-                </p>
-              </li>
-            </ul>
-          </div>`;
-    previewContainer.insertAdjacentHTML("beforeend", timerHTML);
-
-    return { timeRemaining, seconds, minutes, hours, days };
+    const intervalId = setTimeout(getTimeRemaining, 60000);
+    return { timeRemaining, minutes, hours, days };
   };
 
   const start = () => {
     const timer = getTimeRemaining();
 
-    const intervalId = setTimeout(getTimeRemaining, 60000);
-
     if (timer.timeRemaining <= 0) {
       clearTimeout(intervalId);
-      daysText = 0;
-      hoursText = 0;
-      minutesText = 0;
+      days.textContent = 0;
+      hours.textContent = 0;
+      minutes.textContent = 0;
     }
   };
 
   start();
 };
 
-timer("2025/03/10 17:00");
+timer("2027/03/10 17:00");

@@ -1,4 +1,4 @@
-@media(max-width: 1920px) {
+@media (max-width: 1920px) {
   .preview__title {
     font-size: calc(22px + (70 - 22) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(29px + (91 - 29) * ((100vw - 320px) / (1920 - 320)));
@@ -8,7 +8,7 @@
 .preview__container {
   background-blend-mode: multiply;
   position: relative;
-  background-image: url('../images/preview-bg.jpg');
+  background-image: url("../images/preview-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -46,13 +46,18 @@
 
 .timer__item {
   display: flex;
+  gap: 7px;
   justify-self: center;
+  align-items: end;
 }
 
 .timer__number {
+  display: flex;
+  justify-content: end;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
+  min-width: 75px;
 }
 
 .timer__text {
@@ -60,9 +65,22 @@
   font-size: 32px;
   line-height: 42px;
   margin: 0;
+  padding-bottom: 7px;
 }
 
-@media(max-width: 1024px) {
+.timer__text-days {
+  min-width: 80px;
+}
+
+.timer__text-hours {
+  min-width: 95px;
+}
+
+.timer__text-minutes {
+  min-width: 130px;
+}
+
+@media (max-width: 1024px) {
   .preview__container {
     height: 314px;
     border-radius: 16px;
@@ -78,15 +96,30 @@
   .timer__number {
     font-size: 40px;
     line-height: 52px;
+    min-width: 50px;
   }
 
   .timer__text {
     font-size: 16px;
     line-height: 20px;
   }
+
+  .timer__list {
+    gap: 20px;
+  }
+
+  .timer__text-days {
+    min-width: 40px;
+  }
+
+  .timer__text-hours {
+    min-width: 50px;
+  }
+
+  .timer__text-minutes {
+    min-width: 65px;
+  }
 }
-
-
 
 @media (max-width: 768px) {
   .preview__container {
@@ -104,11 +137,29 @@
   .timer__number {
     font-size: 30px;
     line-height: 39px;
+    min-width: 45px;
   }
 
   .timer__text {
     font-size: 20px;
     line-height: 26px;
+    padding-bottom: 3px;
+  }
+
+  .timer__list {
+    gap: 10px;
+  }
+
+  .timer__text-days {
+    min-width: 50px;
+  }
+
+  .timer__text-hours {
+    min-width: 60px;
+  }
+
+  .timer__text-minutes {
+    min-width: 80px;
   }
 }
 
@@ -128,10 +179,28 @@
   .timer__number {
     font-size: 20px;
     line-height: 26px;
+    min-width: 25px;
   }
 
   .timer__text {
     font-size: 12px;
     line-height: 16px;
+    padding-bottom: 1px;
+  }
+
+  .timer__text-days {
+    min-width: 30px;
+  }
+
+  .timer__text-hours {
+    min-width: 36px;
+  }
+
+  .timer__text-minutes {
+    min-width: 47px;
+  }
+
+  .timer__item {
+    gap: 4px;
   }
 }
