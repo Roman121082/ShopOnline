@@ -1,4 +1,31 @@
 "use strict";
+const wrapper = document.querySelector(".wrapper");
+
+const loadArticle = async (cb) => {
+  const result = await fetch("https://gorest.co.in/public-api/posts");
+  const data = await result.json();
+  console.log(data);
+  return data;
+};
+
+const renderArticle = async () => {
+  const data = await loadArticle();
+
+  const article = data.map((item) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+<h2>${item.title}</h2>
+<body>${item.body}</body>
+`;
+    return card;
+  });
+  const wrapper = document.querySelector(".wrapper");
+  wrapper.append(article);
+};
+
+renderArticle();
+loadArticle();
 document.addEventListener("click", (event) => {
   if (event.target.matches("button")) {
     event.target.focus();
